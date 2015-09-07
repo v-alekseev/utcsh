@@ -12,6 +12,8 @@ namespace WindowsForm
 {
     public partial class Form1 : Form
     {
+        Utils utils = new Utils();
+
         public Form1()
         {
             InitializeComponent();
@@ -34,15 +36,12 @@ namespace WindowsForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            progressBar1.Value = CalculateProgress(progressBar1.Value); 
+            progressBar1.Value = utils.CalculateProgress(progressBar1.Value); 
             label1.Text = "Progress bar value = " + progressBar1.Value.ToString();
 
 
         }
-        private int CalculateProgress(int current_progress)
-        {
-            return current_progress == 10 ? 0 : ++current_progress;
-        }
+
 
 
     }
