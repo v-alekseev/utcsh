@@ -42,6 +42,26 @@ namespace WindowsForm
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            switch(progressBar1.Style)
+            {
+                case ProgressBarStyle.Blocks:
+                    progressBar1.Style = ProgressBarStyle.Continuous;
+                    break;
+                case ProgressBarStyle.Continuous:
+                    progressBar1.Style = ProgressBarStyle.Marquee;
+                    break; 
+                case ProgressBarStyle.Marquee:
+                    progressBar1.Style = ProgressBarStyle.Blocks;
+                    break;
+
+            }
+            label1.Text = "Progress bar style = " + progressBar1.Style.ToString() + " code " + (int)progressBar1.Style;
+
+           
+        }
+
 
 
     }
