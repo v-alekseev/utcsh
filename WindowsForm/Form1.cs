@@ -34,8 +34,16 @@ namespace WindowsForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            progressBar1.Value = (progressBar1.Value == 10 ? 0 : ++progressBar1.Value);
+            progressBar1.Value = CalculateProgress(progressBar1.Value); 
             label1.Text = "Progress bar value = " + progressBar1.Value.ToString();
+
+
         }
+        private int CalculateProgress(int current_progress)
+        {
+            return current_progress == 10 ? 0 : ++current_progress;
+        }
+
+
     }
 }
